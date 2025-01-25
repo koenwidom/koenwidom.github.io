@@ -1,0 +1,19 @@
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: gainsboro;
+    margin: auto;
+}
+
+.flex-item {
+    background-attachment: flex;
+    padding: 70px;
+    margin: 0px;
+    flex: 1; 
+}
+
+body {
+    background-color: gainsboro;
+}
