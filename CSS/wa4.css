@@ -10,9 +10,7 @@ body {
     background-color: #ccc;
   }
   
-  .card {
-    transform: scale(.6);
-  }
+
   .card {
     width: 35em;
     height: 22em;
@@ -85,9 +83,6 @@ body {
         
       }
 
-      .mycard {
-        transform: scale(.6);
-      }
     
       .mycard header, .mycard footer {
         padding: 1em;
