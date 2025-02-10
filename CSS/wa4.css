@@ -16,7 +16,7 @@ body {
   .card {
     width: 35em;
     height: 22em;
-    margin: -2em auto;
+    margin: 0em auto;
     background-color: red;
     border: 0.2em solid black;
     border-radius: 1.5em;
@@ -76,7 +76,7 @@ body {
     .mycard {
         width: 35em;
         height: 22em;
-        margin: -5em auto;
+        margin: 0em auto;
         background-color: rgb(57, 51, 84);
         border: 0.2em solid black;
         border-radius: 1.5em;
