@@ -1,0 +1,39 @@
+
+html {
+    font-size: 20px;
+}
+
+p   {
+    font-size: 10px;
+}
+
+#img1 img {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+    max-width: 100%;
+}
+
+#img2 img {
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    max-width: 10%;
+    opacity: 70%;
+}
+
+#img3 img {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+body {
+    z-index: 0;
+    font-size: 100px;
+    background-image: no-repeat bottom url(../img/spongebob.jpg);
+    width: 100%;
+}
