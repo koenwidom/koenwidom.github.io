@@ -62,17 +62,19 @@ body {
 
   @media (max-width: 499px) {
     .photos {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
+      display: grid;
+      gap: 1px; 
+      grid-template-columns: repeat(1, 1fr);
     }
   }
-
-  /* @media (max-width: 499px) {
-    nav ul {
-      font-size: small;
-    }
-  } */
+/* flex didn't work here i'm assuming cause of the grid overriding it */
+/* @media (max-width: 499px) {
+  .photos {
+    display: flex;
+    gap: 1px; 
+    flex-direction: column;
+  }
+} */
 
   .feature {
       width: 200px;
