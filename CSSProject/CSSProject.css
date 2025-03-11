@@ -1,0 +1,46 @@
+
+body {
+    font-family: "DejaVu Sans Mono", monospace;
+    font-size: 9px;
+    background-color: rgb(19, 19, 56);
+}
+
+h1 {
+    text-align: center;
+}
+
+.main {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.column {
+    flex: 1;
+    padding: 1rem;
+    background-color: rgb(245, 245, 245, .8);
+}
+
+.column2 {
+    flex: 1;
+    padding: 1rem;
+    background-color: rgb(245, 245, 245, .8);
+}
+
+@media (max-width: 401px) {
+    
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .column {
+        flex-basis: 100%;
+    }
+}
