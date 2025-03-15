@@ -1,13 +1,62 @@
+@import url("https://use.typekit.net/ina3btx.css");
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+    /* for making the jump to section not be covered by nav bar */
+}
 
 body {
     font-family: "DejaVu Sans Mono", monospace;
     font-size: 1rem;
     background-color: rgb(19, 19, 56);
+    margin: 0px;
+    background-image: url(../img/nebula.png);
 }
 
 h1 {
+    font-family: "ethnocentric", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     text-align: center;
+    font-size: 80px;
 }
+
+h2 {
+    font-family: "ethnocentric", sans-serif;
+    font-weight: 400;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    z-index: 10;
+}
+
+.navbar ul {
+    overflow:visible;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #414040;
+}
+
 
 .main {
     max-width: 1300px;
@@ -16,22 +65,39 @@ h1 {
 
 .row {
     display: flex;
-    gap: 15px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+    gap: 8vw;
+    margin-bottom: 8vw;
+    margin-right: 8vw;
+    margin-left: 8vw;
 }
 
 .column {
     flex: 1;
     padding: 1rem;
-    background-color: rgb(245, 245, 245, .8);
+    background-color: rgb(245, 245, 245, .5);
 }
 
 .column2 {
     flex: 1;
     padding: 1rem;
     background-color: rgb(245, 245, 245, .8);
+}
+
+footer {
+    background-color: #000000;
+    color:white;
+    text-align: center;
+    padding: 15px;
+}
+
+.toTop {
+    background-color: #000000;
+    color:white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 @media (max-width: 401px) {
@@ -42,5 +108,23 @@ h1 {
 
     .column {
         flex-basis: 100%;
+    }
+
+    .navbar ul {
+        overflow:visible;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        position:static;
+    }
+
+    h1 {
+        font-size: 40px;
     }
 }
