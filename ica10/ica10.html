@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ica10</title>
+    <script>
+        function random() {
+            var red = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var blue = Math.floor(Math.random() * 256);
+            var newColor = "rgb(" + red + "," + green + "," + blue + ")";
+            document.getElementById("colorchange").style.backgroundColor = newColor;
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        .colorchange {
+            height: 100vw;
+            width: 100vw;
+        }
+        .button {
+            padding: 0;
+            font-size: 400px;
+        }
+    </style>
+    <input
+        class = "button" id = 'colorchange' type = 'button' value = 'Change' onclick= 'random()'> 
+    </input/>
+    <p id="demo">
+        Why don’t skeletons fight each other?
+    </p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Because they don’t have the guts!"'>click for answer</button>
+
+</body>
+</html>
