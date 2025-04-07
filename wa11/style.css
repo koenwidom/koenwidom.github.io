@@ -14,6 +14,12 @@ h1 {
     width: 640px;
     height: 480px;
   }
+
+  .full-img img {
+    width: 640px;
+    height: 480px;
+    object-fit: cover;
+  }
   
   .overlay {
     position: absolute;
