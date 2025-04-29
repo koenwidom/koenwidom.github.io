@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+  }
+  
+  html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+  }
+  
+  body {
+    overflow: hidden;
+    height: inherit;
+  }
+  
+  #numbers {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+    padding: 0.5em;
+    background: rgba(0, 0, 0);
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+    color: aliceblue;
+    width: 300px;
+  }
+
+  #clear {
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    font-size: 2em;
+    padding: 0.5em;
+    background: rgba(0, 0, 0);
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+    color: aliceblue;
+    width: 300px;
+  }
