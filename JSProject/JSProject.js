@@ -41,7 +41,7 @@ class Ball {
     }
 
     update() {
-        if (random(0,200) > 198) {  
+        if (random(0,200) > 197) {  
             this.x = width/2 + random(-400,600);
             this.y = height/2 + random(-300,300);
             if (random(0,10) > 8) {
