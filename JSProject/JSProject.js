@@ -34,15 +34,29 @@ class Ball {
         ctx.fill();
 
         //number drawing
-        ctx.fillStyle = 'black';
-        ctx.font = `${this.size}px "Comic Sans MS"`;
-        ctx.textAlign = 'center';
-        ctx.fillText(this.number, this.x, this.y);
+
+        if (this.number<=9) {
+            ctx.fillStyle = 'black';
+            ctx.font = `${this.size}px "Comic Sans MS"`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(this.number, this.x, this.y);
+            
+        }
+        else {
+            ctx.fillStyle = 'black';
+            ctx.font = `${this.size}px "Comic Sans MS"`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText("clear", this.x, this.y);
+            
+        }
+        
     }
 
     update() {
-        if (random(0,200) > 197) {  
-            this.x = width/2 + random(-400,600);
+        if (random(0,200) > 196) {  
+            this.x = width/2 + random(-100,600);
             this.y = height/2 + random(-300,300);
             if (random(0,10) > 8) {
                 this.color = randomRGB();
@@ -70,7 +84,7 @@ class Ball {
 const balls = [];
 
 let number = 0;
-while (balls.length < 10) {
+while (balls.length < 11) {
     const size = random(45,60);
     const ball = new Ball(random(0+size, width-size), random(0+size, height-size), randomRGB(), size, number);
     balls.push(ball);
@@ -107,13 +121,36 @@ canvas.addEventListener('click', (e) => {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance <= ball.size) {
+            if (ball.number<=9) {
             const box = document.getElementById("numbers");
-            box.value += ball.number;
+            
+            if (box.value.length <10) {
+                box.value += ball.number;
+            }
+            
             break;
+            }
+            else {
+                document.getElementById("numbers").value = "";
+            }
+            
         }
     }
 });
 
-document.getElementById("clear").addEventListener("click", () => {
-    document.getElementById("numbers").value = "";
-  });
+const submit = document.getElementById('submit');
+const numList = document.getElementById('numList');
+const box = document.getElementById("numbers");
+
+submit.addEventListener('click', () => {
+    const currentValue = box.value;
+
+    if (currentValue.length === 10 ) {
+        numList.textContent = `Submitted(& console logged): ${currentValue}`;
+        box.value = '';
+        console.log('Submitted: '+currentValue);
+   } else {
+       numList.textContent = 'Submitted: A phone number has 10 digits... try again...';
+   }
+
+});
